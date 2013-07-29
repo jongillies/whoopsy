@@ -10,6 +10,6 @@ describe 'Different Command Line Options' do
   #
   it 'should succeed with minimum arguments' do
     args = 'my-argument'
-    expect { Whoopsy::GemName.new(args.shellsplit, "banner", "version") }.not_to raise_error
+    expect { Whoopsy::GemName.new(args.shellsplit, 'banner', 'version') }.not_to raise_error
   end
 end

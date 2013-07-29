@@ -13,7 +13,7 @@ module Whoopsy
         opt :debug, 'Display additional debugging information.'
       end
       unless @cli_arg = args[0]
-        Trollop::die "ERROR: You must specify something on the command line."
+        Trollop::die 'ERROR: You must specify something on the command line.'
       end
       opts
     end
