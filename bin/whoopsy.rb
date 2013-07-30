@@ -2,5 +2,5 @@
 
 require 'whoopsy'
 
-whoops = Whoopsy::GemName.new(ARGV)
+Whoopsy::GemName.new(ARGV)
 
