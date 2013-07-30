@@ -18,5 +18,6 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "rspec"
   gem.add_runtime_dependency "trollop"
+  gem.add_runtime_dependency "active_support"
 
 end

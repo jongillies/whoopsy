@@ -1,9 +1,10 @@
 require 'whoopsy/version'
 require 'trollop'
 require 'shellwords'
+require 'whoopsy/config'
 
 module Whoopsy
-  class GemName
+  class Logger
     attr_reader :cli_arg
     def initialize(args={}, version_text='', banner_text='')
       opts = Trollop::options(args) do
@@ -16,6 +17,9 @@ module Whoopsy
         Trollop::die 'ERROR: You must specify something on the command line.'
       end
       opts
+
+      @config = Whoopsy::Config.new()
+
     end
   end
 end
