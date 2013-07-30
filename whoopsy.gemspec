@@ -4,20 +4,20 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'whoopsy/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "whoopsy"
+  gem.name          = 'whoopsy'
   gem.version       = Whoopsy::VERSION
-  gem.authors       = ["Jon Gillies"]
-  gem.email         = ["supercoder@gmail.com"]
-  gem.description   = %q{Log to Whoops Logger in your scripts'}
-  gem.summary       = %q{Awesome CLI Interface to Whoops Logger (http://www.whoopsapp.com/whoops-logger/)}
-  gem.homepage      = "https://github.com/jongillies/whoopsy"
+  gem.authors       = Whoopsy::AUTHORS
+  gem.email         = Whoopsy::EMAIL
+  gem.description   = Whoopsy::DESCRIPTION
+  gem.summary       = Whoopsy::SUMMARY
+  gem.homepage      = Whoopsy::HOMEPAGE
  
   gem.files = Dir['Rakefile', 'Gemfile', '{bin,lib,man,test,spec}/**/*', 'README*', 'LICENSE*']
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = Dir['{test,spec,features}']
 
-  gem.add_development_dependency "rspec"
-  gem.add_runtime_dependency "trollop"
-  #gem.add_runtime_dependency "active_support"
+  gem.add_development_dependency 'rspec'
+  gem.add_runtime_dependency 'trollop'
+  #gem.add_runtime_dependency 'active_support'
 
 end
