@@ -2,15 +2,11 @@ PATH
   remote: .
   specs:
     whoopsy (0.0.1)
-      active_support
       trollop
 
 GEM
   remote: https://rubygems.org/
   specs:
-    active_support (3.0.0)
-      activesupport (= 3.0.0)
-    activesupport (3.0.0)
     diff-lcs (1.2.1)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
