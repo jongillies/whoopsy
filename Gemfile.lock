@@ -3,11 +3,17 @@ PATH
   specs:
     whoopsy (0.0.1)
       trollop
+      whoops_logger
 
 GEM
   remote: https://rubygems.org/
   specs:
+    ast (1.1.0)
     diff-lcs (1.2.1)
+    json (1.8.0)
+    parser (2.0.0.pre3)
+      ast (~> 1.1)
+      slop (~> 3.4, >= 3.4.5)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -16,11 +22,18 @@ GEM
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.13.0)
+    ruby-lint (0.0.4)
+      parser (>= 2.0.0.pre2)
+      slop
+    slop (3.4.6)
     trollop (2.0)
+    whoops_logger (0.1.4)
+      json
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   rspec
+  ruby-lint
   whoopsy!

@@ -1,5 +1,5 @@
 module Whoopsy
-  VERSION = '0.0.1'
+  VERSION = '0.1.0'
   AUTHORS = ['Jon Gillies']
   EMAIL = %w(supercoder@gmail.com)
   DESCRIPTION = %q{Log to Whoops Logger in your scripts'}

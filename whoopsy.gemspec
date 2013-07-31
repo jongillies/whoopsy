@@ -17,7 +17,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = Dir['{test,spec,features}']
 
   gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'ruby-lint'
   gem.add_runtime_dependency 'trollop'
-  #gem.add_runtime_dependency 'active_support'
+  gem.add_runtime_dependency 'whoops_logger'
 
 end

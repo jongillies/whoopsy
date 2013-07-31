@@ -2,5 +2,4 @@
 
 require 'whoopsy'
 
-Whoopsy::GemName.new(ARGV)
-
+Whoopsy::Logger.new(ARGV)
