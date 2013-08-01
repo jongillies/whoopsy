@@ -66,7 +66,7 @@ module Whoopsy
       begin
         @config.merge! YAML::load_file(file_name)
       rescue Errno::ENOENT
-        $stderr.puts "WARNING: #{file_name} does not exist"
+        ; # No problem here, but catch this specific error
       end
     end
 

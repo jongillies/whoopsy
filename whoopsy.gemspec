@@ -20,5 +20,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'ruby-lint'
   gem.add_runtime_dependency 'trollop'
   gem.add_runtime_dependency 'whoops_logger'
+  gem.add_runtime_dependency 'crack'
 
 end

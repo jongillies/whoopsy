@@ -69,6 +69,20 @@ Here is an example command line:
 ```bash
 whoopsy --host whoops.example.com --port 80 --event-type "warning" --service "my script" --environment "development" --message "working ok today" --event-group-identifier "group7"
 ```
+
+## Version History
+
+* 0.1.1
+    * Supressed warnings for config files missing
+    * --details was not really working because it needed to be a data structure
+        * Modified to accept JSON on commnad line or accept @filename for a json file
+* 0.1.0
+    * Initial release.
+
+## MongoDB Tips
+
+1. mongo whoops --eval "db.dropDatabase()"
+
 ## Contributing
 
 1. Fork it

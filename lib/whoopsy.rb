@@ -2,6 +2,7 @@ require 'whoopsy/version'
 require 'whoopsy/config'
 require 'trollop'
 require 'whoops_logger'
+require 'crack'
 
 module Whoopsy
 
@@ -34,7 +35,7 @@ module Whoopsy
         opt :environment, 'development', type: String
         opt :message, 'String to Show in Whoops Event List', type: String
         opt :event_group_identifier, 'String used to assign related events to a group', type: String
-        opt :details, 'A string, hash, or array of arbitrary data', type: String
+        opt :details, 'A JSON string, or @filename which contains JSON', type: String
 
       end
 
@@ -42,7 +43,20 @@ module Whoopsy
 
       # Set the @config attributes based on the opts hash
       Whoopsy::CONFIG_OPTIONS.each do |option|
+        next if option == :details
         eval("@config.#{option} = \"#{opts[option]}\"") if opts["#{option}_given".to_sym]
+      end
+
+      if opts[:details_given]
+        if opts[:details].to_s.start_with? '@'
+          @config.details = Crack::JSON.parse(File.open(opts[:details].to_s[1..-1], 'r').read)
+        else
+          @config.details = Crack::JSON.parse(opts[:details])
+        end
+      end
+
+      if @config.details == false
+        @config.details = "{\"error\":\"unable to parse JSON data from #{opts[:details]}\"}"
       end
 
       check_required_args

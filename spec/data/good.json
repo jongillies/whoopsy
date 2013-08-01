@@ -1,0 +1,12 @@
+[
+    {
+        "ipAddress": "10.16.100.109",
+        "fqdn": "0050563fe4f5.devapollogrp.edu",
+        "id": 1
+    },
+    {
+        "ipAddress": "10.16.100.193",
+        "fqdn": "0050563fc8d5.devapollogrp.edu",
+        "id": 2
+    }
+]
