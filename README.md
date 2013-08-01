@@ -4,7 +4,7 @@ Whoppsy provides an awesome CLI Interface to Whoops Logger (http://www.whoopsapp
 
 Consult the whoopsy_logger gem http://www.whoopsapp.com/whoops-logger/) for more detailed information.  This Gem is a simple wrapper for that library.
 
-[![Build Status](https://secure.travis-ci.org/jongillies/wgiiost.png?branch=master)](https://github.com/jongillies/whoopsy)
+[![Build Status](https://secure.travis-ci.org/jongillies/whoopsy.png?branch=master)](https://github.com/jongillies/whoopsy)
 
 
 ## Installation
