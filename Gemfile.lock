@@ -17,6 +17,7 @@ GEM
     parser (2.0.0.pre3)
       ast (~> 1.1)
       slop (~> 3.4, >= 3.4.5)
+    rake (10.0.3)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -38,6 +39,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rake
   rspec
   ruby-lint
   whoopsy!

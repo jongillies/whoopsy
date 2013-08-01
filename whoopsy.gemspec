@@ -16,6 +16,7 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = Dir['{test,spec,features}']
 
+  gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'ruby-lint'
   gem.add_runtime_dependency 'trollop'
