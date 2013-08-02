@@ -1,13 +1,12 @@
 # Whoopsy
 
-Whoppsy provides an awesome CLI Interface to Whoops Logger (http://www.whoopsapp.com/whoops-logger/).
-
-Consult the whoopsy_logger gem http://www.whoopsapp.com/whoops-logger/) for more detailed information.  This Gem is a simple wrapper for that library.
-
 [![Build Status](https://secure.travis-ci.org/jongillies/whoopsy.png?branch=master)](https://github.com/jongillies/whoopsy)
 [![Gem Version](https://badge.fury.io/rb/whoopsy.png)](https://badge.fury.io/rb/whoopsy)
 [![Dependency Status](https://gemnasium.com/jongillies/whoopsy.png)](https://gemnasium.com/jongillies/whoopsy)
 
+Whoppsy provides an CLI Interface to Whoops Logger (http://www.whoopsapp.com/whoops-logger/).
+
+Consult the whoopsy_logger gem http://www.whoopsapp.com/whoops-logger/) for more detailed information.  This Gem is a simple wrapper for that library.
 
 ## Installation
 
@@ -72,15 +71,16 @@ You must specify the additional required paramters to send a message to the whoo
 Here is an example command line:
 
 ```bash
-whoopsy --host whoops.example.com --port 80 --event-type "warning" --service "my script" --environment "development" --message "working ok today" --event-group-identifier "group7"
+whoopsy --host whoops.example.com --port 80 --event-type "warning" --service "my script" \
+--environment "development" --message "working ok today" --event-group-identifier "group7"
 ```
 
 ## Version History
 
 * 0.1.1
     * Supressed warnings for config files missing
-    * --details was not really working because it needed to be a data structure
-        * Modified to accept JSON on commnad line or accept @filename for a json file
+    * Noticed --details was not really working because it needs to be a data structure?
+    * Added CI information to the README.MD
 * 0.1.0
     * Initial release.
 
