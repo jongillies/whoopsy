@@ -3,14 +3,17 @@ require 'whoopsy/config'
 require 'trollop'
 require 'whoops_logger'
 require 'crack'
+require 'logger'
 
 module Whoopsy
 
   REQUIRED_ARGS = [:host, :port, :event_type, :service, :environment, :event_group_identifier]
 
-  class Logger
+  class Log
 
     def initialize(args={})
+
+      @debug
 
       opts = Trollop::options(args) do
 
@@ -38,6 +41,8 @@ module Whoopsy
         opt :details, 'A JSON string, or @filename which contains JSON', type: String
 
       end
+
+      @debug = opts[:debug_given] == true
 
       @config = Whoopsy::Config.new
 
@@ -68,17 +73,27 @@ module Whoopsy
 
     def send_message
 
+
       WhoopsLogger.config.set(@config.config_hash)
 
-      WhoopsLogger.log('default::basic', {
-          event_type: @config.event_type,
-          service: @config.service,
-          environment: @config.environment,
-          message: @config.message,
-          event_group_identifier: @config.message,
-          details: @config.details
-      })
+      log = Logger.new(STDOUT)
+      @debug ? log.level = Logger::DEBUG : log.level = Logger::INFO
 
+      WhoopsLogger.config.logger = log
+
+      begin
+        WhoopsLogger.log('default::basic', {
+            event_type: @config.event_type,
+            service: @config.service,
+            environment: @config.environment,
+            message: @config.message,
+            event_group_identifier: @config.message,
+            details: @config.details
+        })
+
+      rescue SocketError => e
+        log.fatal "#{e.message}. Is it the correct hostname?"
+      end
     end
 
     def check_required_args

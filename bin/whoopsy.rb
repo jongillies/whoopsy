@@ -2,4 +2,4 @@
 
 require 'whoopsy'
 
-Whoopsy::Logger.new(ARGV)
+Whoopsy::Log.new(ARGV)
