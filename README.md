@@ -77,6 +77,10 @@ whoopsy --host whoops.example.com --port 80 --event-type "warning" --service "my
 
 ## Version History
 
+* 0.1.2
+    * Renamed internall Logger class to Log to avoid naming conflict with Logger::Logger
+    * Sent WhoopsLooger a "logger" object to get back status, will set log level to DEBUG if --debug is passed
+    * Noticed that if you setup a "Notification Subscription" on your WhoopsServer and you don't have email configured, you get an internal server error and the message will be lost.
 * 0.1.1
     * Supressed warnings for config files missing
     * Noticed --details was not really working because it needs to be a data structure?
