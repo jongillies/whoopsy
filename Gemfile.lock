@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    whoopsy (0.1.1)
+    whoopsy (0.1.2)
       crack
       trollop
       whoops_logger
