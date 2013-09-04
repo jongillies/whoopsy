@@ -11,7 +11,7 @@ describe 'Different Command Line Options' do
   #end
 
   it 'should succeed with required arguments' do
-    args = "--event-type 'warning' --service 'my script' --environment 'development' --event-group-identifier 'whats this'"
+    args = "--host localhost --port 80 --event-type 'warning' --service 'my script' --environment 'development' --event-group-identifier 'whats this'"
     expect { Whoopsy::Log.new(args.shellsplit) }.not_to raise_error
   end
 
