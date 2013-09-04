@@ -19,6 +19,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'ruby-lint'
+  gem.add_development_dependency 'coveralls'
   gem.add_runtime_dependency 'trollop'
   gem.add_runtime_dependency 'whoops_logger'
   gem.add_runtime_dependency 'crack'
