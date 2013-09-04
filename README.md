@@ -3,6 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/jongillies/whoopsy.png?branch=master)](https://github.com/jongillies/whoopsy)
 [![Gem Version](https://badge.fury.io/rb/whoopsy.png)](https://badge.fury.io/rb/whoopsy)
 [![Dependency Status](https://gemnasium.com/jongillies/whoopsy.png)](https://gemnasium.com/jongillies/whoopsy)
+[![Coverage Status](https://coveralls.io/repos/jongillies/whoopsy/badge.png)](https://coveralls.io/r/jongillies/whoopsy)
 
 Whoppsy provides an CLI Interface to Whoops Logger (http://www.whoopsapp.com/whoops-logger/).
 
